@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import sklearn
 
 # Load model (pastikan kamu sudah simpan model ke rf_model.pkl)
 with open("rf_model.pkl", "rb") as f:
