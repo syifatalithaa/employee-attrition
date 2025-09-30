@@ -22,7 +22,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn import metrics
 
 # Load model (pastikan kamu sudah simpan model ke rf_model.pkl)
-with open("rf_model.pkl", "rb") as f:
+with open("./models/rf_model.pkl", "rb") as f:
     model = pickle.load(f)
 
 st.title("📊 Sistem Prediksi Atrisi Karyawan")
