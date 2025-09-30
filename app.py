@@ -1,23 +1,9 @@
-#importing libraries for data handling and analysis
-import pandas as pd
-import numpy as np
 import streamlit as st
+import pandas as pd
 import pickle
-
-#importing libraries for data visualisations
-import seaborn as sns
-import matplotlib.pyplot as plt
-import matplotlib
-import plotly.express as px
-
-#importing warnings to avoid any future warnings
-import warnings
-
-# ml libraries
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
-from sklearn.ensemble import RandomForestClassifier
-from sklearn import metrics
+# import sklearn
+# import matplotlib
+# import seaborn as sns
 
 # Load model (pastikan kamu sudah simpan model ke rf_model.pkl)
 with open("./models/rf_model.pkl", "rb") as f:
