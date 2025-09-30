@@ -47,7 +47,7 @@ status_pernikahan = st.selectbox(
     }[x]
 )
 
-penghasilan_bulanan = st.number_input("Penghasilan Bulanan (isi 3 digit awal saja, contoh: 5000 = Rp 5.000.000)", 1000, 20000, 5000)
+penghasilan_bulanan = st.number_input("Penghasilan Bulanan (isi 3 digit awal saja, contoh: 500 = Rp 5.000.000)", 100, 50000, 500)
 
 kepuasan_kerja = st.selectbox(
     "Kepuasan Kerja (JobSatisfaction)",
