@@ -122,9 +122,20 @@ input_data = pd.DataFrame([{
 }])
 
 # Tombol Prediksi
+# if st.button("Prediksi"):
+#     pred = model.predict(input_data)[0]
+#     if pred == 1:
+#         st.error("⚠️ Prediksi: Karyawan berisiko Attrition.")
+#     else:
+#         st.success("✅ Prediksi: Karyawan bertahan (Tidak Attrition).")
+#     st.write("Hasil prediksi ini berdasarkan model Random Forest dengan akurasi sekitar 87%.")
+
 if st.button("Prediksi"):
-    pred = model.predict(input_data)[0]
-    if pred == 1:
+    proba = model.predict_proba(input_data)[0]   # ambil probabilitas kelas
+    st.write("Probabilitas Tidak Attrition:", proba[0])
+    st.write("Probabilitas Attrition:", proba[1])
+
+    if proba[1] > 0.4:   # ubah threshold default 0.5 jadi 0.4
         st.error("⚠️ Prediksi: Karyawan berisiko Attrition.")
     else:
         st.success("✅ Prediksi: Karyawan bertahan (Tidak Attrition).")
