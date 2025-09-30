@@ -6,9 +6,7 @@ import pickle
 
 #importing libraries for data visualisations
 import seaborn as sns
-from matplotlib import pyplot
 import matplotlib.pyplot as plt
-import matplotlib.pylab as pylab
 import matplotlib
 import plotly.express as px
 
