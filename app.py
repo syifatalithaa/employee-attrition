@@ -135,7 +135,7 @@ if st.button("Prediksi"):
     st.write("Probabilitas Tidak Attrition:", proba[0])
     st.write("Probabilitas Attrition:", proba[1])
 
-    if proba[1] > 0.4:   # ubah threshold default 0.5 jadi 0.4
+    if proba[1] > 0.3:   # ubah threshold default 0.5 jadi 0.4
         st.error("⚠️ Prediksi: Karyawan berisiko Attrition.")
     else:
         st.success("✅ Prediksi: Karyawan bertahan (Tidak Attrition).")
