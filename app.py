@@ -130,7 +130,8 @@ input_data = pd.DataFrame([{
 #         st.success("✅ Prediksi: Karyawan bertahan (Tidak Attrition).")
 #     st.write("Hasil prediksi ini berdasarkan model Random Forest dengan akurasi sekitar 87%.")
 
-model = pickle.load("model_rf.pkl")
+with open("model_rf.pkl", "rb") as file:
+    model = pickle.load(file)
 
 if st.button("Prediksi"):
     proba = model.predict_proba(input_data)[0]   # ambil probabilitas kelas
