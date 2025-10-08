@@ -130,7 +130,7 @@ input_data = pd.DataFrame([{
 #         st.success("✅ Prediksi: Karyawan bertahan (Tidak Attrition).")
 #     st.write("Hasil prediksi ini berdasarkan model Random Forest dengan akurasi sekitar 87%.")
 
-with open("./models/model_rf.pkl", "rb") as file:
+with open("./models/rf_model.pkl", "rb") as file:
     model = pickle.load(file)
 
 if st.button("Prediksi"):
